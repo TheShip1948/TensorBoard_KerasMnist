@@ -76,8 +76,8 @@ model.summary()
 ###############################################################################################
 # history = model.fit(X_train, Y_Train, nb_epoch=nb_epoch, batch_size=batch_size, verbose=1,
 #                     callbacks=[TensorBoard(log_dir='./logs/09_tensorboard', histogram_freq=1)])
-history = model.fit(X_train, Y_Train, nb_epoch=nb_epoch, batch_size=batch_size, verbose=1,
-                    callbacks=[TensorBoard(log_dir='./logs/09_tensorboard')])
+history = model.fit(X_train, Y_Train, nb_epoch=nb_epoch, batch_size=batch_size, verbose=1, validation_data=(X_test, Y_Test), 
+                    callbacks=[TensorBoard(log_dir='./logs/09_tensorboard', histogram_freq=1, write_graph=False, write_grads=True, write_images=True)])
 ###############################################################################################
 # --- Evaluate --- 
 ###############################################################################################
